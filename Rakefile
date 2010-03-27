@@ -9,7 +9,7 @@ begin
     gem.authors     = ["John Bledsoe"]
 
     gem.add_dependency("sinatra")
-    gem.add_dependency("mongomapper")
+    gem.add_dependency("mongo_mapper")
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
