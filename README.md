@@ -30,6 +30,8 @@ Install it with gem:
 You can add a username and password for authentication:
 
     set :mongomapper, 'mongomapper://username:password@localhost:27017/example'
+    
+Using a deferred value for <pre>:mongomapper</pre> doesn't work at this time.
 
 ## Note on Patches/Pull Requests
  
