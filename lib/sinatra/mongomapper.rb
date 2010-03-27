@@ -5,7 +5,7 @@ require 'uri'
 module Sinatra
   module MongoMapper
     def self.registered(app)
-      app.set :mongo_logfile, File.join("log", "mongo-driver-#{environment}.log")
+      app.set :mongo_logfile, File.join("log", "mongo-driver-#{app.environment}.log")
     end
     
     def mongomapper=(mongo_url)
