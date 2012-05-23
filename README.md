@@ -31,6 +31,22 @@ You can add a username and password for authentication:
 
     set :mongomapper, 'mongomapper://username:password@localhost:27017/example'
 
+You can also use in a Sinatra modular style application:
+
+    require 'sinatra/base'
+    require 'sinatra/mongomapper'
+
+    class MyApp < Sinatra::Base
+      register Sinatra::MongoMapper
+
+      set :mongomapper, 'mongomapper://localhost:27017/example'
+      set :mongo_logfile, File.join("log", "mongo-driver-#{environment}.log")
+
+      get '/' do
+        # ...
+      end
+    end
+
 ## Note on Patches/Pull Requests
  
 * Fork the project.
